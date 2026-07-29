@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>My App</title>
+</head>
+<body>
+
+<h2>Data dari Google Apps Script</h2>
+
+<div id="hasil">Loading...</div>
+
+<script>
+
+const API_URL = "https://script.google.com/macros/s/AKfycbyeIzrbJBshAOvtQS3ifmATRGT05ThpvUZrY-y5LMTlkJMObx0IBR-1yE_XQkCi_kfHaA/exec";
+
+fetch(API_URL)
+.then(res => res.text())
+.then(data => {
+    document.getElementById("hasil").innerHTML = data;
+})
+.catch(err => {
+    document.getElementById("hasil").innerHTML = err;
+});
+
+</script>
+
+</body>
+</html>
