@@ -1,98 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>MUTABAAH IBADAH CM3105</title>
-    
-    <link rel="icon" href="https://www.dropbox.com/scl/fi/75c2c1sjrfbebpu1t01ai/hijab.jpg?rlkey=3clm2qezbqgpeo0w0gvquzuhg&st=vxqpt5tk&dl=1" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutaba'ah Yaumiyah</title>
     <style>
-        /* Menghilangkan margin dan padding bawaan browser */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden; /* Mencegah scrollbar ganda */
-            background-color: #f4f4f4; /* Warna latar belakang netral saat loading */
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        body, html {
+            margin: 0; padding: 0; height: 100%; overflow: hidden;
         }
-
         iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
-
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #ffffff;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        .loader {
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #3498db;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            border: none; width: 100%; height: 100%;
         }
     </style>
 </head>
 <body>
-
-    <div id="loading" class="loading-screen">
-        <div class="loader"></div>
-    </div>
-
-    <!-- 
-        GANTI URL DI BAWAH INI DENGAN URL GOOGLE SCRIPT ANDA 
-        PASTIKAN URL DIAKHIRI DENGAN /exec
-    -->
-    <iframe 
-        id="app-frame"
-        src="https://script.google.com/macros/s/AKfycbyeIzrbJBshAOvtQS3ifmATRGT05ThpvUZrY-y5LMTlkJMObx0IBR-1yE_XQkCi_kfHaA/exec" 
-        allow="camera; microphone; geolocation"
-        onload="hideLoader()">
-    </iframe>
-
-    <script>
-        /**
-         * Fungsi untuk menyembunyikan loader setelah iframe selesai dimuat
-         */
-        function hideLoader() {
-            const loader = document.getElementById('loading');
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
-        }
-
-        /**
-         * Mencegah user tidak sengaja keluar halaman (opsional untuk ujian)
-         */
-        window.onbeforeunload = function() {
-            return "Apakah Anda yakin ingin meninggalkan halaman ini?";
-        };
-    </script>
+    <!-- Ganti URL di bawah dengan link Web App Google Apps Script Anda -->
+    <iframe src="https://script.google.com/macros/s/AKfycbwdbfL7UCIHyFYryIWjEgI-a7bym904D73tXOgVSsZb7Af-z1610rSsGSQZK2QSnOKe6g/exec"></iframe>
 </body>
 </html>
